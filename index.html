@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Frontend Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 3D背景容器 -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <span class="nav__logo-text">ALEX</span>
+                <span class="nav__logo-accent">_</span>
+                <span class="nav__logo-text">CHEN</span>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#hero" class="nav__link">首页</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">技术</a></li>
+                <li class="nav__item"><a href="#experience" class="nav__link">履历</a></li>
+                <li class="nav__item"><a href="#hobbies" class="nav__link">爱好</a></li>
+                <li class="nav__item"><a href="#gallery" class="nav__link">相册</a></li>
+            </ul>
+            <div class="nav__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 英雄区 -->
+    <section id="hero" class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="hero__title-line">你好，我是</span>
+                <span class="hero__title-name">Alex Chen</span>
+                <span class="hero__title-line">前端工程师</span>
+            </h1>
+            <p class="hero__description">
+                专注于创造具有未来感的用户界面，
+                热爱探索新技术与设计的边界。
+            </p>
+            <div class="hero__cta">
+                <a href="#skills" class="btn btn--primary">查看我的技术</a>
+                <a href="#gallery" class="btn btn--secondary">查看我的相册</a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20of%20a%20handsome%20Asian%20front-end%20engineer%20with%20glasses%2C%20clean%20style%2C%20modern%20background%2C%20high%20quality%2C%20professional%20lighting&image_size=portrait_4_3" alt="Alex Chen" class="hero__image-img">
+        </div>
+    </section>
+    
+    <!-- 技术区 -->
+    <section id="skills" class="skills">
+        <h2 class="section__title">
+            <span class="section__title-number">01</span>
+            <span class="section__title-text">我的技术栈</span>
+        </h2>
+        <div class="skills__grid">
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">前端基础</h3>
+                <p class="skill__description">HTML5, CSS3, JavaScript (ES6+)</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">框架</h3>
+                <p class="skill__description">React, Vue, Next.js</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">样式</h3>
+                <p class="skill__description">Tailwind CSS, SASS, Styled Components</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">工具</h3>
+                <p class="skill__description">Webpack, Git, Figma, Adobe XD</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">3D/动效</h3>
+                <p class="skill__description">Three.js, GSAP, Framer Motion</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill__card">
+                <div class="skill__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 class="skill__title">后端</h3>
+                <p class="skill__description">Node.js, Express, MongoDB</p>
+                <div class="skill__progress">
+                    <div class="skill__progress-bar" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 履历区 -->
+    <section id="experience" class="experience">
+        <h2 class="section__title">
+            <span class="section__title-number">02</span>
+            <span class="section__title-text">我的履历</span>
+        </h2>
+        <div class="experience__timeline">
+            <div class="experience__item">
+                <div class="experience__date">2022 - 至今</div>
+                <div class="experience__content">
+                    <h3 class="experience__company">TechVision Inc.</h3>
+                    <h4 class="experience__position">高级前端工程师</h4>
+                    <p class="experience__description">
+                        负责公司核心产品的前端架构设计与开发，
+                        主导了从React 16到React 18的技术栈升级，
+                        优化了前端性能，提升了用户体验。
+                    </p>
+                </div>
+            </div>
+            <div class="experience__item">
+                <div class="experience__date">2020 - 2022</div>
+                <div class="experience__content">
+                    <h3 class="experience__company">Innovate Digital</h3>
+                    <h4 class="experience__position">前端工程师</h4>
+                    <p class="experience__description">
+                        参与多个企业级项目的前端开发，
+                        使用Vue.js和Tailwind CSS构建响应式界面，
+                        与设计团队紧密合作，确保UI/UX质量。
+                    </p>
+                </div>
+            </div>
+            <div class="experience__item">
+                <div class="experience__date">2018 - 2020</div>
+                <div class="experience__content">
+                    <h3 class="experience__company">WebCraft Studio</h3>
+                    <h4 class="experience__position">初级前端工程师</h4>
+                    <p class="experience__description">
+                        学习并实践现代前端开发技术，
+                        参与网站和Web应用的开发与维护，
+                        积累了丰富的前端开发经验。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 爱好区 -->
+    <section id="hobbies" class="hobbies">
+        <h2 class="section__title">
+            <span class="section__title-number">03</span>
+            <span class="section__title-text">我的爱好</span>
+        </h2>
+        <div class="hobbies__grid">
+            <div class="hobby__card">
+                <div class="hobby__image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20photography%20landscape%20with%20professional%20camera%2C%20modern%20style%2C%20outdoor%2C%20high%20quality&image_size=landscape_4_3" alt="摄影">
+                </div>
+                <h3 class="hobby__title">摄影</h3>
+                <p class="hobby__description">
+                    热爱捕捉生活中的美好瞬间，
+                    尤其喜欢风景和街拍，
+                    用镜头记录世界的多样性。
+                </p>
+            </div>
+            <div class="hobby__card">
+                <div class="hobby__image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20playing%20piano%20in%20modern%20room%2C%20elegant%20style%2C%20warm%20lighting%2C%20high%20quality&image_size=landscape_4_3" alt="音乐">
+                </div>
+                <h3 class="hobby__title">音乐</h3>
+                <p class="hobby__description">
+                    平时喜欢弹钢琴和听音乐，
+                    音乐是我放松身心的最佳方式，
+                    也能激发我的创作灵感。
+                </p>
+            </div>
+            <div class="hobby__card">
+                <div class="hobby__image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20hiking%20in%20mountains%2C%20active%20lifestyle%2C%20beautiful%20scenery%2C%20high%20quality&image_size=landscape_4_3" alt="徒步">
+                </div>
+                <h3 class="hobby__title">徒步</h3>
+                <p class="hobby__description">
+                    喜欢在周末进行徒步旅行，
+                    亲近大自然，挑战自我，
+                    享受登顶时的成就感。
+                </p>
+            </div>
+            <div class="hobby__card">
+                <div class="hobby__image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20coding%20at%20home%20setup%2C%20modern%20workspace%2C%20multiple%20screens%2C%20high%20quality&image_size=landscape_4_3" alt="编程">
+                </div>
+                <h3 class="hobby__title">编程</h3>
+                <p class="hobby__description">
+                    不仅是工作，也是我的爱好，
+                    喜欢探索新技术和解决编程挑战，
+                    参与开源项目贡献。
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 相册区 -->
+    <section id="gallery" class="gallery">
+        <h2 class="section__title">
+            <span class="section__title-number">04</span>
+            <span class="section__title-text">我的相册</span>
+        </h2>
+        <div class="gallery__grid">
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=handsome%20Asian%20man%20in%20casual%20wear%2C%20outdoor%20portrait%2C%20natural%20lighting%2C%20modern%20style%2C%20high%20quality&image_size=square" alt="生活照1">
+            </div>
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20portrait%20of%20Asian%20man%20in%20suit%2C%20corporate%20style%2C%20clean%20background%2C%20high%20quality&image_size=square" alt="工作照">
+            </div>
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Asian%20man%20traveling%20in%20modern%20city%2C%20tourist%20style%2C%20urban%20background%2C%20high%20quality&image_size=square" alt="旅行照">
+            </div>
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Asian%20man%20playing%20sports%2C%20active%20lifestyle%2C%20outdoor%20setting%2C%20high%20quality&image_size=square" alt="运动照">
+            </div>
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Asian%20man%20at%20tech%20conference%2C%20networking%2C%20professional%20setting%2C%20high%20quality&image_size=square" alt="会议照">
+            </div>
+            <div class="gallery__item">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=handsome%20Asian%20man%20with%20glasses%2C%20casual%20indoor%20portrait%2C%20modern%20apartment%2C%20high%20quality&image_size=square" alt="生活照2">
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__info">
+                <h3 class="footer__name">Alex Chen</h3>
+                <p class="footer__description">前端工程师 | 技术爱好者 | 摄影师</p>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2026 Alex Chen. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- 滚动到顶部按钮 -->
+    <button id="scroll-top" class="scroll-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</body>
+</html>
